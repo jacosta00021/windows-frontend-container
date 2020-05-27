@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        CLIENT_DIR: $Client
+        BRANCH: $Branch
+    ports:
+      - "8080:8080"
+    tty: true
+    env_file: .env
+    
+
+        
+  
+ 
